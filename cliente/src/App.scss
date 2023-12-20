@@ -1,8 +1,107 @@
 $yellow:#FFE600;
 $black:#333333;
-$grey:#333333;
+$darkgrey:#666666;
+$grey:#999999;
 $lightgrey:#EEEEEE;
+$blue:#3483FA;
 
+body {
+  background-color: $lightgrey;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+input:focus, select:focus, select, input.form-control:focus {
+
+  outline:none !important;
+
+  outline-width: 0 !important;
+
+  box-shadow: none !important;
+
+  -moz-box-shadow: none !important;
+
+  -webkit-box-shadow: none !important;
+
+}
+.btn-buy{
+  background-color: $blue;
+  color: $lightgrey;
+  width: 100%;
+}
+.div-btn-buy{
+  margin-left: 0px !important;
+  padding-right: 32px !important;
+}
+.border-item {
+  border-bottom: 1px solid $lightgrey;
+}
+.bg-white {
+  background-color: white;
+}
+.root-item {
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.solded-items {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.img-items {
+  height: 180px !important;
+  width: 180px !important;
+  border-radius: 4px !important;
+  margin: 16px !important;
+}
+.img-item-detail {
+  width: 680px !important;
+  margin: 0px !important;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.price-item{
+  font-size: 24px;
+  margin-bottom: 32px;
+  margin-top: 16px;
+}
+
+.price-item-det{
+  font-size: 46px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.title-item{
+  font-size: 18px;
+}
+
+.title-item-det{
+  font-size: 24px;
+  color: $black ;
+  font-weight:500;
+}
+
+.location-item{
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.item-div-desc{
+  margin-left: 32px;
+  margin-bottom: 32px;
+}
+.item-title-desc{
+  font-size: 28px;
+  font-weight: 400;
+}
+.item-desc{
+  font-size: 16px;
+}
 .box-Search {
   background-color: $yellow;
   padding-top: 10px;
@@ -38,6 +137,7 @@ $lightgrey:#EEEEEE;
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 @media (prefers-reduced-motion: no-preference) {

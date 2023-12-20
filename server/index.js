@@ -10,10 +10,11 @@ const app = express();
 app.use(cors());
 
 app.get("/api", (req, res) => {
+    console.log('holis');
     res.json({ message: "Hola desde el servidor!" });
 });
 
-app.get("/api/items/:query", async (req, res) => {
+app.get("/api/items/q=:query", async (req, res) => {
     try {
         // Obtener el valor de la URL
         const { query } = req.params;
@@ -33,14 +34,21 @@ app.get("/api/items/:id", async (req, res) => {
     try {
         // Obtener el valor de la URL
         const { id } = req.params;
+        // console.log(req);
+        // console.log(id);
         // URL de la API externa con el valor proporcionado
-        const apiUrl = `https://api.mercadolibre.com/items/:${id}`;
-        const apiUrl2 = `https://api.mercadolibre.com/items/:${id}/description`;
+        const apiUrl = `https://api.mercadolibre.com/items/${id}`;
+        const apiUrl2 = `https://api.mercadolibre.com/items/${id}/description`;
         // Realizar la solicitud utilizando axios
         const response = await axios.get(apiUrl);
+        // console.log('response: ',response);
         const response2 = await axios.get(apiUrl2);
+        // console.log('response2: ',response2);
+
         // Unir los datos
         const resultado = { ...response.data, ...response2.data };
+
+        // console.log('resultado: ', resultado);
         // Enviar la respuesta de la API externa como respuesta de tu servidor
         res.json(resultado);
     } catch (error) {
